@@ -12,7 +12,7 @@ class Receiver(Thread):
 
     def run(self):
         while self.running:
-            con = sqlite3.connect("file.db")
+            con = sqlite3.connect("./file.db")
             cur = con.cursor()
             dati = self.connection.recv(4096).decode()
             print(dati)
